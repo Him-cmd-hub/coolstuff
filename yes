@@ -67,7 +67,7 @@ local MainWindow = Rayfield:CreateWindow({
  })
 
  local Button = MainTab:CreateButton({
-	Name = "Mm2 solara version",
+	Name = "Bee swarm",
 	Callback = function(v)
 		v = loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
 	end,
