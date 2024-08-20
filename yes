@@ -67,9 +67,16 @@ local MainWindow = Rayfield:CreateWindow({
  })
 
  local Button = MainTab:CreateButton({
-	Name = "Bee swarm",
+	Name = "Bee swarm histy hub",
 	Callback = function(v)
 		v = loadstring(game:HttpGet("https://raw.githubusercontent.com/scriptpastebin/raw/main/Histy"))()
+	end,
+ }) 
+
+ local Button = MainTab:CreateButton({
+	Name = "RIVALS",
+	Callback = function(v)
+		v = loadstring(game:HttpGet('https://api.luarmor.net/files/v3/loaders/25bef65fd4756876a25c68d1297b80a6.lua'))()
 	end,
  }) 
 
