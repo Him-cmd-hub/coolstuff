@@ -1,0 +1,106 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+
+local MainWindow = Rayfield:CreateWindow({
+	Name = "Main",
+	LoadingTitle = "Loading...",
+	LoadingSubtitle = "by 1 and jacksyn",
+	ConfigurationSaving = {
+	   Enabled = true,
+	   FolderName = nil, -- Create a custom folder for your hub/game
+	   FileName = "1 and jacksyns universal script hub"
+	},
+	Discord = {
+	   Enabled = false,
+	   Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+	   RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+	},
+	KeySystem = false, -- Set this to true to use our key system
+	KeySettings = {
+	   Title = "1 and jacksyns universal script hub",
+	   Subtitle = "Key System",
+	   Note = "Key: jacksynand1",
+	   FileName = "SiriusKey",
+	   SaveKey = true,
+	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+	   Key = "jacksynand1"
+	}
+ })
+
+
+ local MainTab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
+
+
+ local Button = MainTab:CreateButton({
+	Name = "infinite yield",
+	Callback = function(v)
+		v = loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	end,
+ })
+
+ local Button = MainTab:CreateButton({
+	Name = "chat bypass",
+	Callback = function(v)
+		v = loadstring(game:HttpGet("https://raw.githubusercontent.com/hellohellohell012321/KAWAII-BYPASS/main/kawaii-bypass",true))()
+	end,
+ }) 
+
+ local Button = MainTab:CreateButton({
+	Name = "Murderer mystery 2",
+	Callback = function(v)
+		v = loadstring(game:HttpGet("https://raw.githubusercontent.com/BlueZHub/BlueZHubYT/main/Nexus.lua"))()
+	end,
+ }) 
+
+ local Button = MainTab:CreateButton({
+	Name = "Prison Life Admin",
+	Callback = function(v)
+		v = loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua'))()
+	end,
+ }) 
+
+
+
+
+ local Toggle = MainTab:CreateToggle({
+	Name = "Infinite Jump",
+	CurrentValue = false,
+	Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(InfiniteJumpEnabled)
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+            end
+        end)
+	end,
+ })
+
+
+
+ local Slider = MainTab:CreateSlider({
+	Name = "Walkspeed",
+	Range = {16, 250},
+	Increment = 10,
+	Suffix = "Walkspeed",
+	CurrentValue = 10,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end,
+ })
+
+
+
+ local Slider = MainTab:CreateSlider({
+	Name = "JumpPower",
+	Range = {50, 500},
+	Increment = 10,
+	Suffix = "JumpPower",
+	CurrentValue = 10,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end,
+ })
+ 
