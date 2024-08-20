@@ -59,6 +59,13 @@ local MainWindow = Rayfield:CreateWindow({
 	end,
  }) 
 
+ local Button = MainTab:CreateButton({
+	Name = "Mm2 solara version",
+	Callback = function(v)
+		v = loadstring(game:HttpGet('https://pastebin.com/raw/e89Mn4Ec'))()
+	end,
+ }) 
+
 
 
 
