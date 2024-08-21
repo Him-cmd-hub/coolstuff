@@ -28,7 +28,7 @@ local MainWindow = Rayfield:CreateWindow({
  })
 
 
- local MainTab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
+ local MainTab = MainWindow:CreateTab("boblox ware", 4483362458) -- Title, Image
 
 
  local Button = MainTab:CreateButton({
